@@ -8,4 +8,13 @@ class Endereco(
     var estado: String = "",
     var cep: String = "",
     var complemento: String = "" // Para funcionar a SafeCast colocar "String? = null"
-)
+) {
+    fun completo(): String {
+        return """
+            $logradouro - $numero, $bairro, $cidade - $estado
+            CEP: $cep
+            Complemento: $complemento
+        """.trimIndent()
+
+    }
+}

@@ -10,10 +10,10 @@ fun testeNulos() {
 
     //let função que pode ser chamada por qualquer classe - Envolve um objeto para dentro da sua função
     enderecoNulo?.let {
-        println(it.logradouro.length)
+        println(it.logradouro.length) // it refere-se ao tipo de função que recebe um único parametro
 
         val tamanhoComplemento: Int =
-            it.complemento?.length
+            it.complemento?.length // it refere-se ao tipo de função que recebe um único parametro
                 ?: throw IllegalStateException("Complemento não pode ser vazio") // ?: Tratamento com ElvisOperator (sintaxe enxuta)
         println(tamanhoComplemento)
     }
